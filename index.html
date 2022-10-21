@@ -8,6 +8,7 @@
     <title>Inicio</title>
     <link rel="shrtcut icon" href="./assets/imagenes/hogar.png">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body>
@@ -27,12 +28,12 @@
             </nav>
         </header>
         <br>
-        <main>
+        <main class="wow zoomIn" >
             <h1>Inmobiliaria</h1>
             <section class="contenedor">
-                <h2>Preventas exclusivas y propiedades a estrenar</h2>
+                <h2 class="wow zoomIn" >Preventas exclusivas y propiedades a estrenar</h2>
                 <br>
-                <form>
+                <form class="">
                     <input type="text" placeholder="Buscar por localidad">
                     <input type="submit" value="Buscar">
                 </form>
@@ -64,7 +65,7 @@
 
         </main>
 
-        <footer>
+        <footer class="wow zoomIn" >
             <section>
                 <p><a href="./pages/informacion.html#informacion">¿Quieres saber mas sobre nosotros?</a></p>
                 <h3>Seguinos en nuestras redes</h3>
@@ -82,6 +83,9 @@
             </section>
         </footer>
     </div>
+
+    <script src="./js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 </body>
 
 </html>

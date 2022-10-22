@@ -205,7 +205,9 @@ footer {
     justify-content: flex-start;
     overflow: auto;
 }
-
+.ubicacion{
+    margin: 1%;
+}
 
 @media screen and (max-width: 1024px) {
     .box {

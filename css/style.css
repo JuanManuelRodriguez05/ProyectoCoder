@@ -78,6 +78,12 @@ body {
 h1 {
     color: rgb(97, 43, 221);
 }
+h3{
+    background-color: aliceblue;
+    border-radius: 10px;
+    color: rgb(31, 167, 252);
+    padding: 2px;
+}
 
 main {
     grid-area: seccion;
@@ -92,6 +98,7 @@ main {
     display: flex;
     align-items: center;
     height: 500px;
+    overflow: auto;
 }
 
 main section .card {
@@ -147,7 +154,7 @@ form input:focus {
     background: none;
     border: none;
     outline: 0px;
-    border-bottom: 1px solid grey;
+    border: 1px solid grey;
 }
 
 .text-a label {
@@ -181,10 +188,6 @@ footer {
     height: 400px;
 }
 
-.galeria img:hover {
-    transform: scale(1.5);
-}
-
 .t-vender {
     text-align: center;
 }
@@ -194,11 +197,13 @@ footer {
 }
 
 #informacion {
+    margin: 5%;
     height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    overflow: auto;
 }
 
 

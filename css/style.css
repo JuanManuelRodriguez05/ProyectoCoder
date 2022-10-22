@@ -75,6 +75,10 @@ body {
     background-repeat: no-repeat;
 }
 
+h1 {
+    color: rgb(97, 43, 221);
+}
+
 main {
     grid-area: seccion;
     display: flex;
@@ -97,6 +101,8 @@ main section .card {
     width: 400px;
     margin-left: 150px;
     margin-right: 150px;
+    background: none;
+    color:black;
 }
 
 section .card img {
@@ -333,6 +339,11 @@ footer {
         display: flex;
         flex-direction: column;
 
+    }
+
+    .carousel-inner{
+        width: 700px;
+        height: auto;
     }
 
     .galeria {

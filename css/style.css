@@ -78,7 +78,8 @@ body {
 h1 {
     color: rgb(97, 43, 221);
 }
-h3{
+
+h3 {
     background-color: aliceblue;
     border-radius: 10px;
     color: rgb(31, 167, 252);
@@ -109,7 +110,7 @@ main section .card {
     margin-left: 150px;
     margin-right: 150px;
     background: none;
-    color:black;
+    color: black;
 }
 
 section .card img {
@@ -178,16 +179,6 @@ footer {
     width: 100%;
 }
 
-.galeria {
-    margin: 20px;
-    margin-top: 50px;
-}
-
-.galeria img {
-    width: 400px;
-    height: 400px;
-}
-
 .t-vender {
     text-align: center;
 }
@@ -205,8 +196,12 @@ footer {
     justify-content: flex-start;
     overflow: auto;
 }
-.ubicacion{
+
+.ubicacion {
     margin: 1%;
+}
+.card{
+    width: 600px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -348,7 +343,7 @@ footer {
 
     }
 
-    .carousel-inner{
+    .carousel-inner {
         width: 700px;
         height: auto;
     }

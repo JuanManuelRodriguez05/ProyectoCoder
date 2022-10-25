@@ -76,13 +76,13 @@ body {
 }
 
 h1 {
-    color: rgb(97, 43, 221);
+    color: rgb(51, 51, 51);
 }
 
 h3 {
     background-color: aliceblue;
     border-radius: 10px;
-    color: rgb(31, 167, 252);
+    color: rgb(43, 43, 43);
     padding: 2px;
 }
 
@@ -146,27 +146,42 @@ form input {
 }
 
 form input:focus {
-    color: white;
+    color: rgb(41, 41, 41);
     border-bottom: 3px solid white;
     transition: all 0.3s ease;
 }
 
-.text-a textarea {
-    background: none;
-    border: none;
-    outline: 0px;
-    border: 1px solid grey;
+.text-a {
+    background-color: rgb(145, 143, 143);
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    transition: all 0.2s;
+    opacity: 0.3;
 }
 
-.text-a label {
+.text-a:focus {
+    cursor: pointer;
+    background-color: rgb(218, 218, 218);
+
+}
+
+input {
+    margin: 5px;
+}
+
+.text-a:focus {
+    cursor: text;
+    color: rgb(41, 41, 41);
+    background-color: white;
+    border-color: rgb(41, 41, 41);
+    opacity: 0.6;
+}
+
+.text-a .text-a label {
     margin-top: 0%;
-}
-
-.text-a textarea:focus {
-    color: white;
-    border: 3px solid white;
-    transition: all 0.3s ease;
-
 }
 
 footer {
@@ -200,7 +215,8 @@ footer {
 .ubicacion {
     margin: 1%;
 }
-.card{
+
+.card {
     width: 600px;
 }
 

@@ -97,7 +97,7 @@ main {
     height: 100%;
 }
 
-#tarjetas {
+.tarjetas {
     display: flex;
     align-items: center;
     height: 500px;
@@ -202,7 +202,7 @@ footer {
     text-align: center;
 }
 
-#informacion {
+.informacion {
     margin: 5%;
     height: 700px;
     display: flex;
@@ -272,7 +272,7 @@ footer {
         margin: 3%;
     }
 
-    #tarjetas {
+    .tarjetas {
         display: flex;
         flex-direction: column;
 
@@ -367,7 +367,7 @@ footer {
         margin: 3%;
     }
 
-    #tarjetas {
+    .tarjetas {
         display: flex;
         flex-direction: column;
     }

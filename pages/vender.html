@@ -8,16 +8,17 @@
     <title>Vender | Inmobiliaria</title>
     <link rel="shrtcut icon" href="../assets/imagenes/acuerdo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../scss/style.css">
 </head>
 
 <body>
     <div class="box">
         <header>
             <div class="logo">
-                <img src="../assets/imagenes/agencia-inmobiliaria.png" alt="Logo de la marca">
+                <a href="../index.html"><img src="../assets/imagenes/agencia-inmobiliaria.png"
+                        alt="Logo de la marca"></a>
             </div>
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -58,7 +59,8 @@
                 <form>
                     <fieldset>
                         <legend>Vender tu inmueble</legend>
-
+                        <br>
+                        <br>
                         <div>
                             <label for="">Nombre:</label>
                             <input type="text" placeholder="Nombre">
@@ -92,7 +94,7 @@
                         <div>
                             <textarea class="text-a" cols="30" rows="10" placeholder="Comentario"></textarea>
                         </div>
-                        <input type="submit">
+                        <input class="enviar" type="submit">
                     </fieldset>
                 </form>
             </section>

@@ -18,6 +18,7 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
+    overflow-x: hidden;
 
     header {
         grid-area: encabezado;
@@ -125,14 +126,6 @@ body {
             text-align: center;
         }
 
-        .contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 60vh;
-            height: 10vh;
-        }
-
         form {
             color: black;
             display: flex;
@@ -147,11 +140,12 @@ body {
             margin-bottom: 8%;
             border-bottom: 1px solid grey;
         }
-        .enviar{
+
+        .enviar {
             border: 3px solid rgb(71, 137, 194);
             background-color: rgb(112, 184, 247);
             border-radius: 1vh;
-             }
+        }
 
         .enviar {
             margin-left: 80%;
@@ -204,7 +198,8 @@ body {
         .t-vender {
             text-align: center;
         }
-        legend{
+
+        legend {
             background-color: aliceblue;
             border-radius: 1vh;
         }
@@ -276,15 +271,9 @@ body {
             display: flex;
             align-items: flex-start;
         }
-        label{
-            color: aliceblue;
-        }
 
-        .contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 3vh;
+        label {
+            color: aliceblue;
         }
 
         .tarjetas {
@@ -366,15 +355,9 @@ body {
             display: flex;
             align-items: flex-start;
         }
-        label{
-            color: aliceblue;
-        }
 
-        .contenedor {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 3vh;
+        label {
+            color: aliceblue;
         }
 
         .tarjetas {

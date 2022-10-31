@@ -18,6 +18,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
+  overflow-x: hidden;
 }
 body header {
   grid-area: encabezado;
@@ -107,13 +108,6 @@ body main h3 {
 }
 body main h2 {
   text-align: center;
-}
-body main .contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60vh;
-  height: 10vh;
 }
 body main form {
   color: black;
@@ -237,12 +231,6 @@ body footer:hover {
   body label {
     color: aliceblue;
   }
-  body .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3vh;
-  }
   body .tarjetas {
     display: flex;
     flex-direction: column;
@@ -307,12 +295,6 @@ body footer:hover {
   }
   body label {
     color: aliceblue;
-  }
-  body .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3vh;
   }
   body .tarjetas {
     display: flex;

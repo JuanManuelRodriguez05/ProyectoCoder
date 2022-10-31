@@ -321,4 +321,69 @@ body footer:hover {
     justify-content: center;
     margin-top: auto;
   }
+}
+@media screen and (max-width: 450px) {
+  .box {
+    grid-template-areas: "encabezado   encabezado" "seccion  seccion" "pie   pie";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+  }
+  body {
+    background-image: url(../assets/imagenes/fondotablet.jpg);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    min-height: 100vh;
+  }
+  body header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body header .navbar {
+    display: flex;
+    width: 100%;
+  }
+  body header li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh;
+  }
+  body h2 {
+    text-align: center;
+  }
+  body form {
+    color: rgb(219, 218, 218);
+    display: flex;
+    align-items: flex-start;
+  }
+  body label {
+    color: aliceblue;
+  }
+  body .tarjetas {
+    display: flex;
+    flex-direction: column;
+  }
+  body .galeria {
+    margin-left: 4vh;
+  }
+  body .t-galeria {
+    margin-top: 3vh;
+  }
+  body .t-vender {
+    text-align: center;
+    margin-top: 6vh;
+  }
+  body .t-contacto {
+    text-align: center;
+    margin-top: 6vh;
+  }
+  body footer {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    margin-top: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

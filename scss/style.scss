@@ -395,3 +395,87 @@ body {
 
     }
 }
+
+@media screen and (max-width: 450px) {
+    .box {
+        grid-template-areas: "encabezado   encabezado"
+            "seccion  seccion"
+            "pie   pie";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 10fr 1fr;
+    }
+
+    body {
+        background-image: url(../assets/imagenes/fondotablet.jpg);
+        background-size: cover;
+        height: 100%;
+        position: relative;
+        min-height: 100vh;
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .navbar {
+                display: flex;
+                width: 100%;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1vh;
+            }
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            color: rgb(219, 218, 218);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        label {
+            color: aliceblue;
+        }
+
+        .tarjetas {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .galeria {
+            margin-left: 4vh;
+        }
+
+        .t-galeria {
+            margin-top: 3vh;
+        }
+
+        .t-vender {
+            text-align: center;
+            margin-top: 6vh;
+        }
+
+        .t-contacto {
+            text-align: center;
+            margin-top: 6vh;
+        }
+
+        footer {
+            display: flex;
+            list-style: none;
+            text-align: center;
+            justify-content: center;
+            margin-top: auto;
+
+        }
+
+    }
+}

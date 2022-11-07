@@ -10,6 +10,7 @@
   grid-template-areas: "encabezado encabezado" "seccion    seccion" "pie         pie";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 10fr 1fr;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,7 +19,6 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
-  overflow-x: hidden;
 }
 body header {
   grid-area: encabezado;
@@ -46,8 +46,8 @@ body header .navbar {
 }
 body header li {
   font-size: 1.8vh;
-  background-color: rgb(112, 184, 247);
-  color: rgb(49, 48, 48);
+  background-color: rgb(35, 139, 91);
+  color: rgb(36, 35, 35);
   border-radius: 15%;
   font-family: "abyssinica SIL", sasn-serif;
   margin: 0.5vh;
@@ -83,13 +83,13 @@ body main .card {
   flex-direction: column;
   text-align: center;
   width: 40vh;
-  margin-left: 15vh;
-  margin-right: 15vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
   background: none;
   color: black;
   outline: 0px;
   border: none;
-  background-color: rgb(168, 207, 241);
+  background-color: rgb(40, 110, 172);
 }
 body main img {
   display: flex;
@@ -98,19 +98,19 @@ body main img {
   height: 20vh;
 }
 body main h1 {
-  color: rgb(51, 51, 51);
+  color: rgb(36, 35, 35);
 }
 body main h3 {
-  background-color: rgb(71, 137, 194);
+  background-color: rgb(35, 139, 91);
   border-radius: 1vh;
-  color: rgb(43, 43, 43);
+  color: rgb(36, 35, 35);
   padding: 2px;
 }
 body main h2 {
   text-align: center;
 }
 body main form {
-  color: black;
+  color: rgb(36, 35, 35);
   display: flex;
   justify-content: center;
   padding: 2vh;
@@ -123,16 +123,15 @@ body main input {
   border-bottom: 1px solid grey;
 }
 body main .enviar {
-  border: 3px solid rgb(71, 137, 194);
-  background-color: rgb(112, 184, 247);
+  padding: 1vh;
+  border: 3px solid rgb(40, 110, 172);
+  background-color: rgb(35, 139, 91);
   border-radius: 1vh;
-}
-body main .enviar {
-  margin-left: 80%;
+  margin-left: 75%;
 }
 body main input:focus {
-  color: rgb(41, 41, 41);
-  border-bottom: 3px solid white;
+  color: rgb(36, 35, 35);
+  border-bottom: 3px solid rgb(40, 110, 172);
   transition: all 0.3s ease;
 }
 body main .text-a {
@@ -140,7 +139,7 @@ body main .text-a {
   padding: 1em;
   margin: 1em;
   border-radius: 1vh;
-  border: 2px solid transparent;
+  border: 2px solid black;
   outline: none;
   transition: all 0.2s;
   opacity: 0.3;
@@ -150,7 +149,7 @@ body main .text-a label {
 }
 body main .text-a:focus {
   cursor: text;
-  color: rgb(41, 41, 41);
+  color: rgb(36, 35, 35);
   background-color: white;
   border-color: rgb(41, 41, 41);
   opacity: 0.6;
@@ -163,6 +162,12 @@ body main .informacion {
   overflow: auto;
   margin: 5%;
   height: 70vh;
+}
+body main .informacion p {
+  font-size: 2vh;
+  color: black;
+  background-color: rgb(35, 139, 91);
+  border-radius: 1vh;
 }
 body main .ubicacion {
   margin: 1%;
@@ -179,6 +184,7 @@ body main .t-contacto {
 }
 body footer {
   grid-area: pie;
+  background-color: none;
   list-style: none;
   text-align: center;
   justify-content: space-between;
@@ -188,8 +194,8 @@ body footer {
   transition: 0.5s;
 }
 body footer:hover {
-  background-color: rgb(112, 184, 247);
-  border-top: 3px solid rgb(35, 82, 122);
+  background-color: rgb(35, 139, 91);
+  border-top: 3px solid rgb(40, 110, 172);
 }
 
 @media screen and (max-width: 1024px) {
@@ -204,6 +210,7 @@ body footer:hover {
     height: 100%;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   body header {
     display: flex;
@@ -220,11 +227,20 @@ body footer:hover {
     justify-content: center;
     margin: 1vh;
   }
+  body main {
+    grid-area: seccion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+  }
   body h2 {
     text-align: center;
   }
   body form {
-    color: rgb(219, 218, 218);
+    color: aliceblue;
     display: flex;
     align-items: flex-start;
   }
@@ -250,16 +266,17 @@ body footer:hover {
     margin-top: 6vh;
   }
   body footer {
+    grid-area: pie;
     display: flex;
     list-style: none;
     text-align: center;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 2vh;
   }
 }
 @media screen and (max-width: 720px) {
   .box {
-    grid-template-areas: "encabezado   encabezado" "seccion  seccion" "pie   pie";
+    grid-template-areas: "encabezado" "seccion" "pie";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 10fr 1fr;
   }
@@ -267,10 +284,11 @@ body footer:hover {
     background-image: url(../assets/imagenes/fondotablet.jpg);
     background-size: cover;
     height: 100%;
-    position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   body header {
+    grid-area: encabezado;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,11 +297,25 @@ body footer:hover {
     display: flex;
     width: 100%;
   }
+  body header .navbar:hover {
+    background-color: rgba(40, 111, 172, 0.753);
+    border-radius: 1vh;
+    z-index: 1;
+  }
   body header li {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1vh;
+    z-index: 1;
+  }
+  body main {
+    grid-area: seccion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
   body h2 {
     text-align: center;
@@ -315,6 +347,7 @@ body footer:hover {
     margin-top: 6vh;
   }
   body footer {
+    grid-area: pie;
     display: flex;
     list-style: none;
     text-align: center;
@@ -322,9 +355,9 @@ body footer:hover {
     margin-top: auto;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .box {
-    grid-template-areas: "encabezado   encabezado" "seccion  seccion" "pie   pie";
+    grid-template-areas: "encabezado" "seccion" "pie";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 10fr 1fr;
   }
@@ -334,8 +367,10 @@ body footer:hover {
     height: 100%;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   body header {
+    grid-area: encabezado;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -349,6 +384,16 @@ body footer:hover {
     align-items: center;
     justify-content: center;
     margin: 1vh;
+    z-index: 10;
+  }
+  body main {
+    grid-area: seccion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
   }
   body h2 {
     text-align: center;
@@ -380,10 +425,13 @@ body footer:hover {
     margin-top: 6vh;
   }
   body footer {
+    grid-area: pie;
     display: flex;
     list-style: none;
     text-align: center;
     justify-content: center;
     margin-top: auto;
+    position: absolute;
+    bottom: 0%;
   }
 }/*# sourceMappingURL=style.css.map */

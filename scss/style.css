@@ -10,12 +10,12 @@
   grid-template-areas: "encabezado encabezado" "seccion    seccion" "pie         pie";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 10fr 1fr;
-  overflow-x: hidden;
 }
 
 body {
   display: flex;
   background-image: url(../assets/imagenes/parque.jpg);
+  background-size: cover;
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -57,14 +57,15 @@ body header li:hover {
   transform: scale(1.1);
   background-image: radial-gradient(lightblue, white);
 }
-body header a {
+body a {
   font-size: 500;
   text-decoration: none;
 }
-body header a:hover {
+body a:hover {
   color: black;
 }
-body main {
+
+main {
   grid-area: seccion;
   display: flex;
   flex-direction: column;
@@ -72,13 +73,13 @@ body main {
   align-items: center;
   height: 100%;
 }
-body main .tarjetas {
+main .tarjetas {
   display: flex;
   align-items: center;
   height: 50vh;
   overflow: auto;
 }
-body main .card {
+main .card {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -91,50 +92,49 @@ body main .card {
   border: none;
   background-color: rgb(40, 110, 172);
 }
-body main img {
+main img {
   display: flex;
   align-items: center;
   width: 100%;
   height: 20vh;
 }
-body main h1 {
+main h1 {
   color: rgb(36, 35, 35);
 }
-body main h3 {
+main h3 {
   background-color: rgb(35, 139, 91);
   border-radius: 1vh;
   color: rgb(36, 35, 35);
-  padding: 2px;
 }
-body main h2 {
+main h2 {
   text-align: center;
 }
-body main form {
+main form {
   color: rgb(36, 35, 35);
   display: flex;
   justify-content: center;
   padding: 2vh;
 }
-body main input {
+main input {
   background: none;
   border: none;
   outline: 0px;
   margin-bottom: 8%;
   border-bottom: 1px solid grey;
 }
-body main .enviar {
+main .enviar {
   padding: 1vh;
   border: 3px solid rgb(40, 110, 172);
   background-color: rgb(35, 139, 91);
   border-radius: 1vh;
   margin-left: 75%;
 }
-body main input:focus {
+main input:focus {
   color: rgb(36, 35, 35);
   border-bottom: 3px solid rgb(40, 110, 172);
   transition: all 0.3s ease;
 }
-body main .text-a {
+main .text-a {
   background-color: rgb(145, 143, 143);
   padding: 1em;
   margin: 1em;
@@ -144,17 +144,17 @@ body main .text-a {
   transition: all 0.2s;
   opacity: 0.3;
 }
-body main .text-a label {
+main .text-a label {
   margin-top: 0%;
 }
-body main .text-a:focus {
+main .text-a:focus {
   cursor: text;
   color: rgb(36, 35, 35);
   background-color: white;
   border-color: rgb(41, 41, 41);
   opacity: 0.6;
 }
-body main .informacion {
+main .informacion {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,26 +163,27 @@ body main .informacion {
   margin: 5%;
   height: 70vh;
 }
-body main .informacion p {
+main .informacion p {
   font-size: 2vh;
   color: black;
   background-color: rgb(35, 139, 91);
   border-radius: 1vh;
 }
-body main .ubicacion {
+main .ubicacion {
   margin: 1%;
 }
-body main .t-vender {
+main .t-vender {
   text-align: center;
 }
-body main legend {
+main legend {
   background-color: aliceblue;
   border-radius: 1vh;
 }
-body main .t-contacto {
+main .t-contacto {
   text-align: center;
 }
-body footer {
+
+footer {
   grid-area: pie;
   background-color: none;
   list-style: none;
@@ -193,7 +194,8 @@ body footer {
   width: 100%;
   transition: 0.5s;
 }
-body footer:hover {
+
+footer:hover {
   background-color: rgb(35, 139, 91);
   border-top: 3px solid rgb(40, 110, 172);
 }
@@ -206,11 +208,9 @@ body footer:hover {
   }
   body {
     background-image: url(../assets/imagenes/fondotablet.jpg);
-    background-size: cover;
     height: 100%;
     position: relative;
     min-height: 100vh;
-    overflow-x: hidden;
   }
   body header {
     display: flex;
@@ -221,57 +221,56 @@ body footer:hover {
     display: flex;
     width: 100%;
   }
+  body header ul {
+    margin-left: 7vh;
+  }
   body header li {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1vh;
   }
-  body main {
+  main {
     grid-area: seccion;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    overflow-x: hidden;
   }
-  body h2 {
+  h2 {
     text-align: center;
   }
-  body form {
+  form {
     color: aliceblue;
     display: flex;
     align-items: flex-start;
   }
-  body label {
+  label {
     color: aliceblue;
   }
-  body .tarjetas {
+  .tarjetas {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2vh;
   }
-  body .galeria {
+  .galeria {
     margin-left: 4vh;
   }
-  body .t-galeria {
-    margin-top: 4vh;
-  }
-  body .t-vender {
+  .t-vender {
     text-align: center;
     margin-top: 5vh;
   }
-  body .t-contacto {
+  .t-contacto {
     text-align: center;
     margin-top: 6vh;
   }
-  body footer {
+  footer {
     grid-area: pie;
     display: flex;
     list-style: none;
     text-align: center;
     justify-content: center;
-    margin-top: 2vh;
   }
 }
 @media screen and (max-width: 720px) {
@@ -285,7 +284,6 @@ body footer:hover {
     background-size: cover;
     height: 100%;
     min-height: 100vh;
-    overflow-x: hidden;
   }
   body header {
     grid-area: encabezado;
@@ -335,9 +333,6 @@ body footer:hover {
   body .galeria {
     margin-left: 4vh;
   }
-  body .t-galeria {
-    margin-top: 3vh;
-  }
   body .t-vender {
     text-align: center;
     margin-top: 6vh;
@@ -365,9 +360,7 @@ body footer:hover {
     background-image: url(../assets/imagenes/fondotablet.jpg);
     background-size: cover;
     height: 100%;
-    position: relative;
     min-height: 100vh;
-    overflow-x: hidden;
   }
   body header {
     grid-area: encabezado;
@@ -379,12 +372,17 @@ body footer:hover {
     display: flex;
     width: 100%;
   }
+  body header .navbar:hover {
+    background-color: rgba(40, 111, 172, 0.753);
+    border-radius: 1vh;
+    z-index: 1;
+  }
   body header li {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1vh;
-    z-index: 10;
+    z-index: 1;
   }
   body main {
     grid-area: seccion;
@@ -393,7 +391,6 @@ body footer:hover {
     justify-content: center;
     align-items: center;
     height: 100%;
-    overflow-x: hidden;
   }
   body h2 {
     text-align: center;
@@ -413,9 +410,6 @@ body footer:hover {
   body .galeria {
     margin-left: 4vh;
   }
-  body .t-galeria {
-    margin-top: 3vh;
-  }
   body .t-vender {
     text-align: center;
     margin-top: 6vh;
@@ -431,7 +425,5 @@ body footer:hover {
     text-align: center;
     justify-content: center;
     margin-top: auto;
-    position: absolute;
-    bottom: 0%;
   }
 }/*# sourceMappingURL=style.css.map */

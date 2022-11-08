@@ -7,20 +7,22 @@
     box-sizing: border-box;
 }
 
+
 .box {
     width: 100%;
     display: grid;
     grid-template-areas: "encabezado encabezado" "seccion    seccion" "pie         pie";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 10fr 1fr;
+}
 
 body {
     display: flex;
     background-image: url(../assets/imagenes/parque.jpg);
+    background-size: cover;
     background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
-
 
     header {
         grid-area: encabezado;
@@ -58,183 +60,181 @@ body {
             font-family: 'abyssinica SIL', sasn-serif;
             margin: 0.5vh;
             padding: 0 2vh;
-        }
 
-        li:hover {
-            transform: scale(1.1);
-            background-image: radial-gradient(lightblue, white);
-        }
-
-        a {
-            font-size: 500;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: black;
+            &:hover {
+                transform: scale(1.1);
+                background-image: radial-gradient(lightblue, white);
+            }
         }
     }
 
+    a {
+        font-size: 500;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: black;
+    }
+}
 
 
-    main {
-        grid-area: seccion;
+
+main {
+    grid-area: seccion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .tarjetas {
+        display: flex;
+        align-items: center;
+        height: 50vh;
+        overflow: auto;
+    }
+
+    .card {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        text-align: center;
+        width: 40vh;
+        margin-left: 5vh;
+        margin-right: 5vh;
+        background: none;
+        color: black;
+        outline: 0px;
+        border: none;
+        background-color: $colorDos;
+    }
+
+    img {
+        display: flex;
         align-items: center;
-        height: 100%;
-
-        .tarjetas {
-            display: flex;
-            align-items: center;
-            height: 50vh;
-            overflow: auto;
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            width: 40vh;
-            margin-left: 5vh;
-            margin-right: 5vh;
-            background: none;
-            color: black;
-            outline: 0px;
-            border: none;
-            background-color: $colorDos;
-        }
-
-        img {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 20vh;
-        }
-
-        h1 {
-            color: $colorLetra;
-        }
-
-        h3 {
-            background-color: $colorUno;
-            border-radius: 1vh;
-            color: $colorLetra;
-            padding: 2px;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        form {
-            color: $colorLetra;
-            display: flex;
-            justify-content: center;
-            padding: 2vh;
-        }
-
-        input {
-            background: none;
-            border: none;
-            outline: 0px;
-            margin-bottom: 8%;
-            border-bottom: 1px solid grey;
-        }
-
-        .enviar {
-            padding: 1vh;
-            border: 3px solid $colorDos;
-            background-color: $colorUno;
-            border-radius: 1vh;
-            margin-left: 75%;
-        }
-
-        input:focus {
-            color: $colorLetra;
-            border-bottom: 3px solid $colorDos;
-            transition: all 0.3s ease;
-        }
-
-        .text-a {
-            background-color: rgb(145, 143, 143);
-            padding: 1em;
-            margin: 1em;
-            border-radius: 1vh;
-            border: 2px solid black;
-            outline: none;
-            transition: all 0.2s;
-            opacity: 0.3;
-
-            label {
-                margin-top: 0%;
-            }
-        }
-
-        .text-a:focus {
-            cursor: text;
-            color: $colorLetra;
-            background-color: white;
-            border-color: rgb(41, 41, 41);
-            opacity: 0.6;
-        }
-
-        .informacion {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            overflow: auto;
-            margin: 5%;
-            height: 70vh;
-
-            p {
-                font-size: 2vh;
-                color: black;
-                background-color: $colorUno;
-                border-radius: 1vh;
-            }
-
-        }
-
-        .ubicacion {
-            margin: 1%;
-        }
-
-        .t-vender {
-            text-align: center;
-        }
-
-        legend {
-            background-color: aliceblue;
-            border-radius: 1vh;
-        }
-
-        .t-contacto {
-            text-align: center;
-        }
+        width: 100%;
+        height: 20vh;
     }
 
-    footer {
-        grid-area: pie;
-        background-color: map-get($estilos, color);
-        list-style: none;
-        text-align: map-get($estilos, centro);
-        justify-content: space-between;
-        position: absolute;
-        bottom: 0%;
-        width: map-get($estilos, fAncho);
-        transition: 0.5s;
+    h1 {
+        color: $colorLetra;
     }
 
-    footer:hover {
+    h3 {
         background-color: $colorUno;
-        border-top: 3px solid $colorDos;
+        border-radius: 1vh;
+        color: $colorLetra;
     }
 
+    h2 {
+        text-align: center;
+    }
 
+    form {
+        color: $colorLetra;
+        display: flex;
+        justify-content: center;
+        padding: 2vh;
+    }
+
+    input {
+        background: none;
+        border: none;
+        outline: 0px;
+        margin-bottom: 8%;
+        border-bottom: 1px solid grey;
+    }
+
+    .enviar {
+        padding: 1vh;
+        border: 3px solid $colorDos;
+        background-color: $colorUno;
+        border-radius: 1vh;
+        margin-left: 75%;
+    }
+
+    input:focus {
+        color: $colorLetra;
+        border-bottom: 3px solid $colorDos;
+        transition: all 0.3s ease;
+    }
+
+    .text-a {
+        background-color: rgb(145, 143, 143);
+        padding: 1em;
+        margin: 1em;
+        border-radius: 1vh;
+        border: 2px solid black;
+        outline: none;
+        transition: all 0.2s;
+        opacity: 0.3;
+
+        label {
+            margin-top: 0%;
+        }
+    }
+
+    .text-a:focus {
+        cursor: text;
+        color: $colorLetra;
+        background-color: white;
+        border-color: rgb(41, 41, 41);
+        opacity: 0.6;
+    }
+
+    .informacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: auto;
+        margin: 5%;
+        height: 70vh;
+
+        p {
+            font-size: 2vh;
+            color: black;
+            background-color: $colorUno;
+            border-radius: 1vh;
+        }
+
+    }
+
+    .ubicacion {
+        margin: 1%;
+    }
+
+    .t-vender {
+        text-align: center;
+    }
+
+    legend {
+        background-color: aliceblue;
+        border-radius: 1vh;
+    }
+
+    .t-contacto {
+        text-align: center;
+    }
 }
+
+footer {
+    grid-area: pie;
+    background-color: map-get($estilos, color);
+    list-style: none;
+    text-align: map-get($estilos, centro);
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0%;
+    width: map-get($estilos, fAncho);
+    transition: 0.5s;
+}
+
+footer:hover {
+    background-color: $colorUno;
+    border-top: 3px solid $colorDos;
+}
+
 
 @media screen and (max-width: 1024px) {
     .box {
@@ -252,6 +252,7 @@ body {
         min-height: 100vh;
         overflow-x: hidden;
 
+
         header {
             display: flex;
             flex-direction: column;
@@ -262,6 +263,10 @@ body {
                 width: 100%;
             }
 
+            ul {
+                margin-left: 7vh;
+            }
+
             li {
                 display: flex;
                 align-items: center;
@@ -269,66 +274,64 @@ body {
                 margin: 1vh;
             }
         }
+    }
 
-        main {
-            grid-area: seccion;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
+    main {
+        grid-area: seccion;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
 
-        h2 {
-            text-align: center;
-        }
+    h2 {
+        text-align: center;
+    }
 
-        form {
-            color: aliceblue;
-            display: flex;
-            align-items: flex-start;
-        }
+    form {
+        color: aliceblue;
+        display: flex;
+        align-items: flex-start;
+    }
 
-        label {
-            color: aliceblue;
-        }
+    label {
+        color: aliceblue;
+    }
 
-        .tarjetas {
-            display: flex;
-            flex-direction: column;
-
-        }
-
-        .galeria {
-            margin-left: 4vh;
-        }
-
-        .t-galeria {
-            margin-top: 4vh;
-        }
-
-        .t-vender {
-            text-align: center;
-            margin-top: 5vh;
-        }
-
-        .t-contacto {
-            text-align: center;
-            margin-top: 6vh;
-        }
-
-        footer {
-            grid-area: pie;
-            display: flex;
-            list-style: none;
-            text-align: center;
-            justify-content: center;
-            margin-top: 2vh;
-
-        }
+    .tarjetas {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2vh;
 
     }
+
+    .galeria {
+        margin-left: 4vh;
+    }
+
+
+
+    .t-vender {
+        text-align: center;
+        margin-top: 5vh;
+    }
+
+    .t-contacto {
+        text-align: center;
+        margin-top: 6vh;
+    }
+
+    footer {
+        grid-area: pie;
+        display: flex;
+        list-style: none;
+        text-align: center;
+        justify-content: center;
+    }
+
 }
+
 
 @media screen and (max-width: 720px) {
     .box {
@@ -341,9 +344,9 @@ body {
 
     body {
         background-image: url(../assets/imagenes/fondotablet.jpg);
+        background-size: cover;
         height: 100%;
         min-height: 100vh;
-        overflow-x: hidden;
 
         header {
             grid-area: encabezado;
@@ -404,9 +407,6 @@ body {
             margin-left: 4vh;
         }
 
-        .t-galeria {
-            margin-top: 3vh;
-        }
 
         .t-vender {
             text-align: center;
@@ -442,10 +442,9 @@ body {
 
     body {
         background-image: url(../assets/imagenes/fondotablet.jpg);
+        background-size: cover;
         height: 100%;
-        position: relative;
         min-height: 100vh;
-        overflow-x: hidden;
 
         header {
             grid-area: encabezado;
@@ -456,6 +455,12 @@ body {
             .navbar {
                 display: flex;
                 width: 100%;
+
+                &:hover {
+                    background-color: rgba(40, 111, 172, 0.753);
+                    border-radius: 1vh;
+                    z-index: 1;
+                }
             }
 
             li {
@@ -463,7 +468,7 @@ body {
                 align-items: center;
                 justify-content: center;
                 margin: 1vh;
-                z-index: 10;
+                z-index: 1;
             }
         }
 
@@ -500,9 +505,6 @@ body {
             margin-left: 4vh;
         }
 
-        .t-galeria {
-            margin-top: 3vh;
-        }
 
         .t-vender {
             text-align: center;
@@ -515,17 +517,13 @@ body {
         }
 
         footer {
-            grid-area: pie; 
+            grid-area: pie;
             display: flex;
             list-style: none;
             text-align: center;
             justify-content: center;
             margin-top: auto;
-            position: absolute;
-            overflow-x: hidden;
-            bottom: 0%;
 
         }
-
     }
 }

@@ -1,5 +1,7 @@
-@import "estilo";
-@import "paletaDeColores";
+@import "./components/estilo";
+@import "./components/paletaDeColores";
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 
 * {
     margin: 0;
@@ -95,6 +97,20 @@ main {
         overflow: auto;
     }
 
+    .carousel {
+        width: 90vh;
+    }
+
+    .img-g {
+        height: 40vh;
+    }
+
+    .card-g {
+        width: 90vh;
+        background-color: $colorDos;
+        text-align: center;
+    }
+
     .card {
         display: flex;
         flex-direction: column;
@@ -117,17 +133,24 @@ main {
     }
 
     h1 {
+        font-family: Courgette, sans-serif;
         color: $colorLetra;
     }
 
     h3 {
+        font-family: Courgette, sans-serif;
         background-color: $colorUno;
         border-radius: 1vh;
         color: $colorLetra;
     }
 
     h2 {
+        font-family: Courgette, sans-serif;
         text-align: center;
+    }
+
+    p {
+        font-family: Antic Slab, sans-serif
     }
 
     form {
@@ -359,7 +382,7 @@ footer:hover {
                 width: 100%;
 
                 &:hover {
-                    background-color: rgba(40, 111, 172, 0.753);
+                    background-color: rgba(127, 201, 214, 0.753);
                     border-radius: 1vh;
                     z-index: 1;
                 }
@@ -407,6 +430,19 @@ footer:hover {
             margin-left: 4vh;
         }
 
+        .carousel {
+            width: 50vh;
+        }
+
+        .img-g {
+            height: 30vh;
+        }
+
+        .card-g {
+            width: 50vh;
+            background-color: $colorDos;
+            text-align: center;
+        }
 
         .t-vender {
             text-align: center;
@@ -505,6 +541,19 @@ footer:hover {
             margin-left: 4vh;
         }
 
+        .carousel {
+            width: 40vh;
+        }
+
+        .img-g {
+            height: 20vh;
+        }
+
+        .card-g {
+            width: 40vh;
+            background-color: $colorDos;
+            text-align: center;
+        }
 
         .t-vender {
             text-align: center;

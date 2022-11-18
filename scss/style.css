@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +48,7 @@ body header .navbar {
 }
 body header li {
   font-size: 1.8vh;
-  background-color: rgb(35, 139, 91);
+  background-color: rgb(163, 228, 215);
   color: rgb(36, 35, 35);
   border-radius: 15%;
   font-family: "abyssinica SIL", sasn-serif;
@@ -79,6 +81,17 @@ main .tarjetas {
   height: 50vh;
   overflow: auto;
 }
+main .carousel {
+  width: 90vh;
+}
+main .img-g {
+  height: 40vh;
+}
+main .card-g {
+  width: 90vh;
+  background-color: rgb(127, 201, 214);
+  text-align: center;
+}
 main .card {
   display: flex;
   flex-direction: column;
@@ -90,7 +103,7 @@ main .card {
   color: black;
   outline: 0px;
   border: none;
-  background-color: rgb(40, 110, 172);
+  background-color: rgb(127, 201, 214);
 }
 main img {
   display: flex;
@@ -99,15 +112,21 @@ main img {
   height: 20vh;
 }
 main h1 {
+  font-family: Courgette, sans-serif;
   color: rgb(36, 35, 35);
 }
 main h3 {
-  background-color: rgb(35, 139, 91);
+  font-family: Courgette, sans-serif;
+  background-color: rgb(163, 228, 215);
   border-radius: 1vh;
   color: rgb(36, 35, 35);
 }
 main h2 {
+  font-family: Courgette, sans-serif;
   text-align: center;
+}
+main p {
+  font-family: Antic Slab, sans-serif;
 }
 main form {
   color: rgb(36, 35, 35);
@@ -124,14 +143,14 @@ main input {
 }
 main .enviar {
   padding: 1vh;
-  border: 3px solid rgb(40, 110, 172);
-  background-color: rgb(35, 139, 91);
+  border: 3px solid rgb(127, 201, 214);
+  background-color: rgb(163, 228, 215);
   border-radius: 1vh;
   margin-left: 75%;
 }
 main input:focus {
   color: rgb(36, 35, 35);
-  border-bottom: 3px solid rgb(40, 110, 172);
+  border-bottom: 3px solid rgb(127, 201, 214);
   transition: all 0.3s ease;
 }
 main .text-a {
@@ -166,7 +185,7 @@ main .informacion {
 main .informacion p {
   font-size: 2vh;
   color: black;
-  background-color: rgb(35, 139, 91);
+  background-color: rgb(163, 228, 215);
   border-radius: 1vh;
 }
 main .ubicacion {
@@ -196,8 +215,8 @@ footer {
 }
 
 footer:hover {
-  background-color: rgb(35, 139, 91);
-  border-top: 3px solid rgb(40, 110, 172);
+  background-color: rgb(163, 228, 215);
+  border-top: 3px solid rgb(127, 201, 214);
 }
 
 @media screen and (max-width: 1024px) {
@@ -211,6 +230,7 @@ footer:hover {
     height: 100%;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
   }
   body header {
     display: flex;
@@ -296,7 +316,7 @@ footer:hover {
     width: 100%;
   }
   body header .navbar:hover {
-    background-color: rgba(40, 111, 172, 0.753);
+    background-color: rgba(127, 201, 214, 0.753);
     border-radius: 1vh;
     z-index: 1;
   }
@@ -332,6 +352,17 @@ footer:hover {
   }
   body .galeria {
     margin-left: 4vh;
+  }
+  body .carousel {
+    width: 50vh;
+  }
+  body .img-g {
+    height: 30vh;
+  }
+  body .card-g {
+    width: 50vh;
+    background-color: rgb(127, 201, 214);
+    text-align: center;
   }
   body .t-vender {
     text-align: center;
@@ -409,6 +440,17 @@ footer:hover {
   }
   body .galeria {
     margin-left: 4vh;
+  }
+  body .carousel {
+    width: 40vh;
+  }
+  body .img-g {
+    height: 20vh;
+  }
+  body .card-g {
+    width: 40vh;
+    background-color: rgb(127, 201, 214);
+    text-align: center;
   }
   body .t-vender {
     text-align: center;

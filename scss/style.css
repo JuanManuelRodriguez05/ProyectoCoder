@@ -240,6 +240,12 @@ footer:hover {
   body header .navbar {
     display: flex;
     width: 100%;
+    z-index: 1;
+  }
+  body header .navbar:hover {
+    background-color: rgba(127, 201, 214, 0.753);
+    border-radius: 1vh;
+    z-index: 1;
   }
   body header ul {
     margin-left: 7vh;
@@ -258,8 +264,14 @@ footer:hover {
     align-items: center;
     height: 100%;
   }
+  h3 {
+    margin: 1vh;
+  }
   h2 {
     text-align: center;
+  }
+  legend {
+    background: none;
   }
   form {
     color: aliceblue;
@@ -293,7 +305,7 @@ footer:hover {
     justify-content: center;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 820px) {
   .box {
     grid-template-areas: "encabezado" "seccion" "pie";
     grid-template-columns: 1fr;
@@ -335,6 +347,9 @@ footer:hover {
     align-items: center;
     height: 100%;
   }
+  body h3 {
+    margin: 1vh;
+  }
   body h2 {
     text-align: center;
   }
@@ -345,6 +360,9 @@ footer:hover {
   }
   body label {
     color: aliceblue;
+  }
+  body legend {
+    background: none;
   }
   body .tarjetas {
     display: flex;
@@ -404,7 +422,7 @@ footer:hover {
     width: 100%;
   }
   body header .navbar:hover {
-    background-color: rgba(40, 111, 172, 0.753);
+    background-color: rgba(127, 201, 214, 0.753);
     border-radius: 1vh;
     z-index: 1;
   }

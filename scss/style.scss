@@ -284,6 +284,13 @@ footer:hover {
             .navbar {
                 display: flex;
                 width: 100%;
+                z-index: 1;
+
+                &:hover {
+                    background-color: rgba(127, 201, 214, 0.753);
+                    border-radius: 1vh;
+                    z-index: 1;
+                }
             }
 
             ul {
@@ -308,8 +315,16 @@ footer:hover {
         height: 100%;
     }
 
+    h3 {
+        margin: 1vh;
+    }
+
     h2 {
         text-align: center;
+    }
+
+    legend {
+        background: none;
     }
 
     form {
@@ -356,7 +371,7 @@ footer:hover {
 }
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 820px) {
     .box {
         grid-template-areas: "encabezado"
             "seccion"
@@ -406,6 +421,10 @@ footer:hover {
             height: 100%;
         }
 
+        h3 {
+            margin: 1vh;
+        }
+
         h2 {
             text-align: center;
         }
@@ -418,6 +437,10 @@ footer:hover {
 
         label {
             color: aliceblue;
+        }
+
+        legend {
+            background: none;
         }
 
         .tarjetas {
@@ -493,7 +516,7 @@ footer:hover {
                 width: 100%;
 
                 &:hover {
-                    background-color: rgba(40, 111, 172, 0.753);
+                    background-color: rgba(127, 201, 214, 0.753);
                     border-radius: 1vh;
                     z-index: 1;
                 }

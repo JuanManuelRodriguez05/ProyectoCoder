@@ -420,6 +420,12 @@ footer:hover {
             align-items: center;
             height: 100%;
         }
+        h1{
+            padding-top: 3vh;
+            font-size: 2rem;
+            -webkit-text-stroke: 1px aliceblue;
+            color: black;
+        }
 
         h3 {
             margin: 1vh;
@@ -448,6 +454,12 @@ footer:hover {
             flex-direction: column;
 
         }
+        .t-galeria {
+            font-size: 2.5rem;
+            -webkit-text-stroke: 1px aliceblue;
+            color: black;
+        }
+
 
         .galeria {
             margin-left: 4vh;
@@ -540,7 +552,14 @@ footer:hover {
             height: 100%;
         }
 
+        h1 {
+            margin-top: 1.5vh;
+        }
+
         h2 {
+            text-align: center;
+        }
+        h3{
             text-align: center;
         }
 
@@ -560,6 +579,7 @@ footer:hover {
 
         }
 
+       
         .galeria {
             margin-left: 4vh;
         }

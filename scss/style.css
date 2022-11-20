@@ -347,6 +347,12 @@ footer:hover {
     align-items: center;
     height: 100%;
   }
+  body h1 {
+    padding-top: 3vh;
+    font-size: 2rem;
+    -webkit-text-stroke: 1px aliceblue;
+    color: black;
+  }
   body h3 {
     margin: 1vh;
   }
@@ -367,6 +373,11 @@ footer:hover {
   body .tarjetas {
     display: flex;
     flex-direction: column;
+  }
+  body .t-galeria {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px aliceblue;
+    color: black;
   }
   body .galeria {
     margin-left: 4vh;
@@ -441,7 +452,13 @@ footer:hover {
     align-items: center;
     height: 100%;
   }
+  body h1 {
+    margin-top: 1.5vh;
+  }
   body h2 {
+    text-align: center;
+  }
+  body h3 {
     text-align: center;
   }
   body form {
